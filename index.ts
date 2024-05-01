@@ -125,7 +125,6 @@ app.get('/', (req: Request, res: Response) => {
         return res.status(400).json({ error: 'Prompt parameter is missing' });
     }
 
-    console.log(prompt);
     generateImages(prompt)
         .then(images => {
             if (images) {
