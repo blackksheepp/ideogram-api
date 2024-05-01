@@ -13,7 +13,7 @@
 - <b>Step 3.</b> To Get "COOKIES" 
   - Open https://ideogram.ai/ -> Login -> Go to your profile page.
   - Open Inspect Tab -> Go to Networks Section -> Search "api/n" -> Go to Headers Tab -> Copy the highlighted text -> Paste into "COOKIES"
-   ![](https://images2.imgbox.com/ea/f6/FuN960ek_o.png)
+   ![](https://images2.imgbox.com/e3/0b/TwXJl6tj_o.png)
 - <b>Step 4.</b> Set PORT (optional) 
 - <b>Step 5.</b> Run `npm i` 
 - <b>Step 5.</b> Run `npm run dev` 
