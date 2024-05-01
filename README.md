@@ -2,7 +2,9 @@
 
 #### This is an unoficial wrapper made for Ideogram. You can enter your account details and use this api to generate images from anywhere you want.
 
+<br>
 <hr>
+<br>
 
 ## How to run?
 - <b>Step 1.</b> Rename "edit.env" to ".env" and fill the data as shown in steps below.
@@ -18,5 +20,20 @@
 - <b>Step 5.</b> Run `npm i` 
 - <b>Step 5.</b> Run `npm run dev` 
 
+<br>
 <hr>
+<br>
+
+## How to use?
+- Just make request at `{your_host}:{port}/?prompt={prompt}`
+  - example: `http://localhost:3000/?prompt=cat with a hat`
+  - response:  [
+    <br>"https://ideogram.ai/api/images/direct/C3LH6Ty7Tt2WvK3f4YLUfQ",
+    <br>"https://ideogram.ai/api/images/direct/GbGf-Qw-SUWPQvc6F0mogQ",
+    <br>"https://ideogram.ai/api/images/direct/K0W1AtJOTB-CQ58o8ei8hQ",
+    <br>"https://ideogram.ai/api/images/direct/O-iv5bjJQhmmB0cQvbQbzw"
+  <br>]
+<br>
+<hr>
+
 
