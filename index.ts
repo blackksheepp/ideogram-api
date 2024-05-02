@@ -2,6 +2,11 @@ import express, { Request, Response } from 'express';
 import dotenv from 'dotenv';
 import axios from 'axios';
 
+import fs from 'fs-extra';
+import path from 'path';
+
+const refreshFile = path.join(__dirname, 'refresh.txt');
+
 dotenv.config();
 
 if (!process.env.REFRESH_TOKEN) {
@@ -59,7 +64,13 @@ const refreshToken = async () => {
     const refreshUrl = "https://securetoken.googleapis.com/v1/token?key=AIzaSyBwq4bRiOapXYaKE-0Y46vLAw1-fzALq7Y";
     const refreshPayload = {
         "grant_type": "refresh_token",
-        "refresh_token": process.env.REFRESH_TOKEN
+        "refresh_token": ""
+    }
+
+    if (fs.existsSync(refreshFile)) {
+        refreshPayload["refresh_token"] = fs.readFileSync(refreshFile, 'utf-8')
+    } else {
+        refreshPayload["refresh_token"] = process.env.REFRESH_TOKEN!
     }
 
     const res = await axios.post(refreshUrl, refreshPayload, {
@@ -69,6 +80,9 @@ const refreshToken = async () => {
     if (res && res.data) {
         USER_ID = res.data.user_id;
         ACCESS_TOKEN = res.data.access_token;
+        if (!fs.existsSync(refreshFile)) {
+            fs.writeFileSync(refreshFile, res.data.refresh_token)
+        }
     }
 }
 
