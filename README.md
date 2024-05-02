@@ -16,7 +16,7 @@ This is an unoficial wrapper made for Ideogram. You can enter your account detai
    ![](https://images2.imgbox.com/e3/0b/TwXJl6tj_o.png)
 - <b>Step 4.</b> Set PORT (optional) 
 - <b>Step 5.</b> Run `npm i` 
-- <b>Step 5.</b> Run `npm run dev` 
+- <b>Step 6.</b> Run `npm run dev` 
 
 <br>
 
