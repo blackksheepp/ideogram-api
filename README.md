@@ -1,4 +1,4 @@
-# Ideogram API (Unofficial)
+# Ideogram API (Unofficial) - Not Maintained
 
 This is an unoficial wrapper made for Ideogram. You can enter your account details and use this api to generate images from anywhere you want.
 
